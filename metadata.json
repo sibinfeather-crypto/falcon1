@@ -1,0 +1,6 @@
+{
+  "name": "Falcon Club - Official VIP Registration",
+  "description": "Join Falcon Club today. Official VIP registration portal with exclusive rewards, games, and invitation perks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
