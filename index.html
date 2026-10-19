@@ -18,6 +18,23 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener("click", function (event) {
+        const element = event.target.closest("a, button");
+
+        if (!element || typeof window.fbq !== "function") return;
+
+        const text = (element.innerText || element.textContent || "")
+          .trim()
+          .toLowerCase();
+
+        if (text.includes("register now")) {
+          fbq("trackCustom", "RegisterNowClick");
+        } else if (text.includes("click emblem to enter")) {
+          fbq("trackCustom", "EnterEmblemClick");
+        }
+      });
+    </script>
   </body>
 </html>
 
